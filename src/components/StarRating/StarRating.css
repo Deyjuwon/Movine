@@ -1,0 +1,16 @@
+.star-rating {
+    display: inline-flex;
+  }
+  
+  .star {
+    font-size: 24px;
+  }
+  
+  .yellow {
+    color: #FFD700; /* Yellow color */
+  }
+  
+  .gray {
+    color: #888; /* Gray color */
+  }
+  

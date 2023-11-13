@@ -1,0 +1,108 @@
+
+
+.hero-image {
+    position: relative;
+    width: 100%;
+}
+
+
+.hero-image > img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.movie-details {
+    position: absolute;
+    top: 250px;
+    color: #fff;
+    left: 40px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width:45%;
+}
+
+.movie-details > h1 {
+    font-size: 50px;
+    font-weight: 600;
+    
+}
+
+.movie-details > h1 > span {
+    font-size: 40px;
+    font-weight: 200;
+}
+
+
+.m-plot > span:nth-child(1) {
+    font-size: 18px;
+    font-weight:400;
+    
+}
+
+.m-plot > span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+/* .ratings {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+} */
+
+.ratings {
+    font-size: 18px;
+    font-weight:400;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ratings > span:nth-child(2) {
+    font-size: 12px;
+    font-weight: 300;
+
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-btns {
+    padding: 12px 32px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 6px;
+    transition: transform 0.8s; /* Add a smooth transition for the scaling effect */
+
+    /* Initial state */
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(1.1); 
+    }
+
+
+}
+
+.btn1 {
+    background-color: var(--secondary);
+
+}
+
+.btn2 {
+    background-color: gray;
+}

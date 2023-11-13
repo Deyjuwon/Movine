@@ -1,0 +1,61 @@
+.vl {
+    border-left: 3px solid grey;
+     height: 35px;
+}
+
+header {
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.left-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.left-header > :nth-child(1) {
+    font-size: 26px;
+}
+
+.logo {
+    color: var(--secondary);
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    position: relative;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.search-input {
+    background: transparent;
+    border: 2px solid var(--secondary);
+    min-width: 250px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border-radius: 7px;
+    padding-left: 6px;
+    height: 40px;
+    
+}
+
+.search-icon {
+    position: absolute;
+    left: 480px;
+    top: 8px;
+}

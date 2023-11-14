@@ -26,7 +26,7 @@ const TrendingMovies = () => {
 
   return (
     <div className="all-movies-container">
-      <h1>Trending Movies</h1>
+      <h1>New Released Movies</h1>
   
         <div className="movies-container">
             {newMovies.map(movie => (

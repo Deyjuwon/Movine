@@ -46,3 +46,29 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+.hover-button {
+    position: absolute;
+    top: 160px;
+    left: 12px;
+    /* transform: translate(-50%, -50%); */
+    display: block; /* initially hidden */
+    padding: 7px 15px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 6px;
+
+  }
+  
+  .text {
+    transition: 1s ease;
+  }
+  
+  .upward {
+    transform: translateY(-50px);
+  }

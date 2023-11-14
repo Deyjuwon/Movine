@@ -1,0 +1,30 @@
+.sponsor-container {
+    background-color: #5a5d63;
+    
+    padding: 50px 70px ;
+    /* width: 100%; */
+    display: flex;
+    gap: 25px;
+    
+    flex-direction: column;
+    color: #fff;
+
+}
+
+
+.sponsor-text > p {
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.sponsor-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.sponsor-img > img {
+    width: 9%;
+}

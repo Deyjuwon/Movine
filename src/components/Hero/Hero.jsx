@@ -15,7 +15,7 @@ const Hero = () => {
     axios.get(trendingMovieURL)
       .then(response => {
         if (response.data.results.length > 0) {
-          setTrendingMovie(response.data.results[6]);
+          setTrendingMovie(response.data.results[Math.floor(Math.random()*20)]);
           console.log(response.data.results)
         }
       })

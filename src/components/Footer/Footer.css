@@ -1,0 +1,50 @@
+footer {
+    display: flex;
+    color: #fff;
+    background-color: #000;
+    justify-content: space-between;
+    padding: 50px 25px;
+    
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.footer2 > a {
+    color: #c0c1c2;
+    font-weight: 300;
+
+}
+.footer2 > a:hover {
+    text-decoration: underline;
+} 
+
+.footer1 > p {
+    font-size: 30px;
+}
+
+.footer1 {
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+}
+
+.footer1 >div > p {
+    color: #c0c1c2;
+    font-weight: 300;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer1-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

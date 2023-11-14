@@ -5,6 +5,9 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import SearchResult from './components/SearchResult/SearchResult'
 import TrendingMovies from './components/TrendingMovies/TrendingMovies'
+import Sponsors from './components/Sponsors/Sponsors'
+import Footer from './components/Footer/Footer'
+import NetflixAd from './components/NetflixAd/NetflixAd'
 
 function App() {
 
@@ -31,6 +34,9 @@ function App() {
       <Hero />
       
       <TrendingMovies />
+      <NetflixAd />
+      <Sponsors />
+      <Footer />
       
     </div>
   )

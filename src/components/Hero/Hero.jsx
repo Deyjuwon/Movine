@@ -9,7 +9,6 @@ const Hero = () => {
   const [trendingMovie, setTrendingMovie] = useState(null);
 
   useEffect(() => {
-    // Replace 'YOUR_API_KEY' with your actual TMDb API key
     const apiKey = '4c5792d4ff7ca8669330aa3950f9938e';
     const trendingMovieURL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
 
@@ -17,12 +16,16 @@ const Hero = () => {
       .then(response => {
         if (response.data.results.length > 0) {
           setTrendingMovie(response.data.results[6]);
+          console.log(response.data.results)
         }
       })
+      
       .catch(error => {
         console.error('Error fetching trending movie:', error);
       });
   }, []);
+
+  
 
   return (
     <div className="hero">
@@ -30,7 +33,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-image">
             <img
-              src={`https://image.tmdb.org/t/p/w1280${trendingMovie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w1280${trendingMovie.backdrop_path}`}
               alt={trendingMovie.title}
             />
           </div>

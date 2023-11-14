@@ -1,0 +1,48 @@
+.movie-card {
+    /* border: 1px solid red; */
+    width: 30%;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 1s; /* Add a smooth transition for the scaling effect */
+
+    /* Initial state */
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(1.1); 
+    }
+}
+
+.movie-card > img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.hover-text {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+}
+
+.hover-text > h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: yellow;
+}
+
+.hover-text >p {
+    font-size: 13px;
+    color: #e3dede;
+    font-weight: 300;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    cursor: pointer;
+    text-decoration: underline;
+}

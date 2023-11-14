@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import SearchResult from './components/SearchResult/SearchResult'
+import TrendingMovies from './components/TrendingMovies/TrendingMovies'
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
     <div>
       <Header />
       <Hero />
+      
+      <TrendingMovies />
       
     </div>
   )

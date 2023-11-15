@@ -42,7 +42,7 @@ const Footer = () => {
             <a href="">Where To Watch</a>
         </div>
         <div className="footer2">
-            <p className='f-head'>Supoort</p>
+            <p className='f-head'>Support</p>
             <a href="">Finding Help</a>
             <a href="">Support LIbrary</a>
             <a href="">Community Forum</a>

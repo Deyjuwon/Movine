@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import TrendingMoviesCard from '../TrendingMoviesCard/TrendingMoviesCard';
-import './TrendingMovies.css'
+import UpcomingCard from '../UpcomingCard/UpcomingCard';
+import './Upcoming.css'
 import { IoIosArrowForward } from "react-icons/io";
 
 
-const TrendingMovies = () => {
+const Upcoming = () => {
   const [newMovies, setNewMovies] = useState([]);
 
   useEffect(() => {
 
     const apiKey = '4c5792d4ff7ca8669330aa3950f9938e';
-    const newMoviesURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
+    const upcomingMoviesURL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`;
 
-    axios.get(newMoviesURL)
+    axios.get(upcomingMoviesURL)
       .then(response => {
         if (response.data.results.length > 0) {
-          setNewMovies(response.data.results.slice(7, 13)); // Display the first 5 movies
+          setNewMovies(response.data.results.slice(11, 17)); // Display the first 6 movies
         }
       })
       .catch(error => {
@@ -27,7 +27,7 @@ const TrendingMovies = () => {
   return (
     <div className="all-movies-container">
       <div className='all-header'>
-        <h1>New Released Movies</h1>
+        <h1>Upcoming</h1>
         <button className='more'>
           <span>View All</span>
           <IoIosArrowForward size={20} />
@@ -36,10 +36,10 @@ const TrendingMovies = () => {
   
         <div className="movies-container">
             {newMovies.map(movie => (
-            <TrendingMoviesCard key={movie.id} movie={movie} />
+            <UpcomingCard key={movie.id} movie={movie} />
       ))}
     </div>
-    
+
     
 
 
@@ -48,4 +48,4 @@ const TrendingMovies = () => {
   );
 };
 
-export default TrendingMovies;
+export default Upcoming;

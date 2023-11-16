@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import axios from 'axios';
 import Spinner from 'react-bootstrap/Spinner';
 import './Trending.css'
+import SkeletonElement from '../components/Skeleton/SkeletonElement';
 
 const Trending = () => {
   const [newMovies, setNewMovies] = useState([]);
@@ -15,12 +16,12 @@ const Trending = () => {
 
     const apiKey = '4c5792d4ff7ca8669330aa3950f9938e';
     const newMoviesURL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
-
+    
     axios.get(newMoviesURL)
       .then(response => {
         if (response.data.results.length > 0) {
           setNewMovies(response.data.results.slice(0, 18));
-          setLoading(true) // Display the first 5 movies
+          setLoading(true) 
         }
       })
       .catch(error => {
@@ -41,9 +42,10 @@ const Trending = () => {
         <div className="movies-container">
             {loading ? newMovies.map(movie => (
             <TrendingMoviesCard key={movie.id} movie={movie} />
-      )) : <Spinner className='spinner' animation="grow" />}
+      )) : [1,2,3,4,5,6,7,8,9].map(n => <SkeletonElement key={n} /> )}
     </div>
     
+    {/* <div className='spinner'><Spinner  animation="grow" /></div> */}
     
 
 
@@ -53,6 +55,7 @@ const Trending = () => {
 
       <Sponsors />
       <Footer />
+
     </div>
   )
 }

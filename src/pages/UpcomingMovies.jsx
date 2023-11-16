@@ -4,9 +4,11 @@ import Sponsors from '../components/Sponsors/Sponsors'
 import axios from 'axios';
 import UpcomingCard from '../components/UpcomingCard/UpcomingCard';
 import { IoIosArrowForward } from "react-icons/io";
+import SkeletonElement from '../components/Skeleton/SkeletonElement';
 
 const UpcomingMovies = () => {
     const [newMovies, setNewMovies] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
 
@@ -30,15 +32,15 @@ const UpcomingMovies = () => {
             <div className='all-header'>
                 <h1>Upcoming</h1>
                 <button className='more'>
-                <span>View All</span>
+                <span>View More</span>
                 <IoIosArrowForward size={20} />
                 </button>
             </div>
         
                 <div className="movies-container">
-                    {newMovies.map(movie => (
+                    {loading ? newMovies.map(movie => (
                     <UpcomingCard key={movie.id} movie={movie} />
-            ))}
+            )) : [1,2,3,4,5,6,7,8,9].map(n => <SkeletonElement key={n} />)}
             </div>
         </div>
 

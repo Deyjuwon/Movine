@@ -4,6 +4,7 @@ import TrendingMoviesCard from '../TrendingMoviesCard/TrendingMoviesCard';
 import './TrendingMovies.css'
 import { IoIosArrowForward } from "react-icons/io";
 import SkeletonElement from '../Skeleton/SkeletonElement';
+import { Link, NavLink } from 'react-router-dom'
 
 
 const TrendingMovies = () => {
@@ -18,7 +19,8 @@ const TrendingMovies = () => {
     axios.get(newMoviesURL)
       .then(response => {
         if (response.data.results.length > 0) {
-          setNewMovies(response.data.results.slice(7, 13)); 
+          setNewMovies(response.data.results.slice(7, 13));
+          setLoading(true) 
         }
       })
       .catch(error => {
@@ -30,10 +32,10 @@ const TrendingMovies = () => {
     <div className="all-movies-container">
       <div className='all-header'>
         <h1>New Released Movies</h1>
-        <button className='more'>
+        <Link className='nav1' to='./Discover'><button className='more'>
           <span>View All</span>
           <IoIosArrowForward size={20} />
-        </button>
+        </button></Link>
       </div>
   
         <div className="movies-container">

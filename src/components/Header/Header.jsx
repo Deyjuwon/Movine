@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
         <div className='left-header'>
-            <Link className='nav1' to='./'><span>Mov</span><span className='logo'>ine</span></Link>
+            <Link className='nav1' to='./'><span >Mov</span><span className='logo'>ine</span></Link>
             <div className='vl'></div>
             <NavLink className='nav1' to='./Discover' href="">Discover</NavLink>
         </div>

@@ -18,7 +18,8 @@ const UpcomingMovies = () => {
         axios.get(upcomingMoviesURL)
         .then(response => {
             if (response.data.results.length > 0) {
-            setNewMovies(response.data.results.slice(0, 18)); // Display the first 6 movies
+            setNewMovies(response.data.results.slice(0, 18)); 
+            setLoading(true) 
             }
         })
         .catch(error => {

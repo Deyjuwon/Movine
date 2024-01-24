@@ -14,8 +14,9 @@ const Home = () => {
         
         
         <TrendingMovies />
-        <Upcoming />
+        
         <NetflixAd />
+        <Upcoming />
         <Sponsors />
         <Footer />
     </div>

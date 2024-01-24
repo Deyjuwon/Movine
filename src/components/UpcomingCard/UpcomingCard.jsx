@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { BsPlay } from 'react-icons/bs'
 
 
+
 const UpcomingCard = ({ movie }) => {
   const [isHovered, setIsHovered] = useState(false);
 

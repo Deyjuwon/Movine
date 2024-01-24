@@ -6,6 +6,7 @@ import { BsPlay } from 'react-icons/bs'
 
 const TrendingMovieCard = ({ movie }) => {
   const [isHovered, setIsHovered] = useState(false);
+ 
 
   return (
  
